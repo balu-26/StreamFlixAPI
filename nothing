@@ -1,0 +1,14 @@
+{
+    "id":1,
+    "name":"balu",
+    "emaik":"thorlikonda.com",
+    "age":25,
+    "adress":{
+        "city":"clevealnd",
+        "state":"ohio"
+    },
+    "phone":[
+        "2167029066",
+        "123456789"
+    ]
+}

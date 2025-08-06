@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jzaM9s4LHermEVwKegx9hOFOV+CrbnjstJQ/nDyyoIc=",
+  "Source": "StreamFlixAPI",
+  "BasePath": "_content/StreamFlixAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
