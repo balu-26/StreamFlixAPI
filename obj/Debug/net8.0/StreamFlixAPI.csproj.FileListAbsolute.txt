@@ -145,3 +145,10 @@ C:\Users\thorl\videoplayer\StreamFlixAPI\obj\Debug\net8.0\refint\StreamFlixAPI.d
 C:\Users\thorl\videoplayer\StreamFlixAPI\obj\Debug\net8.0\StreamFlixAPI.pdb
 C:\Users\thorl\videoplayer\StreamFlixAPI\obj\Debug\net8.0\StreamFlixAPI.genruntimeconfig.cache
 C:\Users\thorl\videoplayer\StreamFlixAPI\obj\Debug\net8.0\ref\StreamFlixAPI.dll
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\appsettings.json
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\StreamFlixAPI.deps.json
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\StreamFlixAPI.runtimeconfig.json
+C:\Users\thorl\videoplayer\StreamFlixAPI\bin\Debug\net8.0\publish\publish\StreamFlixAPI.staticwebassets.endpoints.json
+C:\Users\thorl\videoplayer\StreamFlixAPI\obj\Debug\net8.0\StreamFlixAPI.sourcelink.json
