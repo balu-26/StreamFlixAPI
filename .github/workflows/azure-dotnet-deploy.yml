@@ -1,22 +1,22 @@
-name: Deploy .NET Backend to Azure
+name: Deploy StreamFlix API to Azure Web App
 
 on:
   push:
     branches:
-      - master  # Change this if your branch is named differently
+      - master  # or master, depending on your repo
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup .NET
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x'  # Change if you're using .NET 8 or earlier
+          dotnet-version: '9.0.x'  # Match your backend .NET version
 
       - name: Restore dependencies
         run: dotnet restore
@@ -24,13 +24,13 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
-      - name: Publish
-        run: dotnet publish -c Release -o publish
+      - name: Publish project
+        run: dotnet publish --configuration Release --output ./publish
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: StreamFlix-api        # 🔁 replace this
+          app-name: StreamFlix-api   # 👈 Replace with your Azure App Service name
           slot-name: production
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: publish
+          package: ./publish
