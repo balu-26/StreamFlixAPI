@@ -35,4 +35,13 @@ app.UseCors(policy =>
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+// Program.cs (after app.MapControllers())
+app.MapGet("/api/ping", () => Results.Ok("pong"));
+
+app.MapGet("/api/db-check", async (AppDbContext db) =>
+{
+    var canConnect = await db.Database.CanConnectAsync();
+    return canConnect ? Results.Ok("db-ok") : Results.StatusCode(500);
+});
+
 app.Run();
