@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using StreamFlixAPI.Data;
-using StreamFlixAPI.Services; // ✅ Add this at the top
-
+using StreamFlixAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +10,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 builder.Services.AddHttpClient<GeoLocationService>();
-
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -26,9 +24,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(policy =>
-    policy.WithOrigins("http://localhost:3000,https://gray-glacier-09eab180f.2.azurestaticapps.net")
-          .AllowAnyHeader()
-          .AllowAnyMethod());
+    policy.WithOrigins(
+        "http://localhost:3000",
+        "https://gray-glacier-09eab180f.2.azurestaticapps.net"
+    )
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+);
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
